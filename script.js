@@ -1,6 +1,7 @@
 const mainSec = document.querySelector(".main-sec");
 const submit = document.querySelector(".submit");
 const title = document.querySelector(".title");
+const playAgain = document.querySelector(".restart");
 
 let numQuestion = 0;
 let dataMain;
@@ -78,5 +79,10 @@ submit.addEventListener("click", function () {
       correctAnswer++;
     }
     title.textContent = `You Score ${correctAnswer}/10`;
+    playAgain.style.display = "block";
   }
+});
+
+playAgain.addEventListener("click", function () {
+  window.location.reload();
 });
