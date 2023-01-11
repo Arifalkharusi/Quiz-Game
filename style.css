@@ -4,16 +4,21 @@
   padding: 0;
 }
 
-html {
-  font-size: 62.5%;
-}
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 2rem;
+  padding: 20px;
+  height: 100%;
+  color: rgb(37, 91, 104);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(109, 226, 218, 1) 100%
+  );
 }
 
 .container {
@@ -21,33 +26,39 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 70rem;
+  max-width: 800px;
+  padding: 50px;
+  background: rgb(204, 246, 240);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
 }
 .heading {
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 20px;
 }
 .question {
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
   text-align: center;
-  border-bottom: 0.5rem solid black;
-  padding: 2rem;
+  border-bottom: 1px solid rgb(86, 129, 139);
+  padding: 20px;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 20px;
 }
 .answermain {
-  column-gap: 1rem;
-  margin-bottom: 1rem;
+  column-gap: 10px;
+  margin-bottom: 10px;
   cursor: pointer;
-  padding: 2rem;
-  border-radius: 2rem;
-  border: 0.1rem solid black;
-  max-width: 70rem;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  max-width: 80rem;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 13px;
+  background: white;
+  font-weight: bold;
 }
 
 .answermain:hover {
@@ -57,37 +68,43 @@ body {
 }
 
 .selected {
-  border: 0.1rem solid yellowgreen;
-  background-color: lightgreen;
+  background-color: rgb(15, 217, 221);
+  color: white;
 }
-.disable {
-  pointer-events: none;
-}
+
 .submit {
   cursor: pointer;
-  max-width: 20rem;
+  max-width: 200px;
   width: 100%;
   height: 50px;
   border: none;
-  background-color: greenyellow;
+  background: rgb(22, 73, 127);
   border-radius: 10px;
-  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+.submit:hover {
+  filter: brightness(0.95);
+  transform: scale(1.1);
+  transition: all 0.5s;
 }
 .restart {
   display: none;
-  padding: 2rem 4rem;
+  padding: 20px 40px;
   border: none;
   background: rgb(212, 80, 80);
-  color: #fff;
+  color: white;
   font-weight: bold;
-  font-size: 2rem;
-  box-shadow: 0px 5px 0px rgba(0, 0, 0, 1);
+  font-size: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  transition: all 0.15s;
+  border-radius: 10px;
 }
 .restart:hover {
   background: rgb(177, 69, 69);
-}
-.restart:active {
-  margin-top: 5px;
-  box-shadow: none;
+  transform: scale(1.1);
+  transition: all 0.15s;
 }
